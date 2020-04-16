@@ -20,7 +20,7 @@ public interface CSiUserRepository extends CrudRepository<CScUserEO, Long> {
      * @param aId id of the user
      * @return EO
      */
-    Optional<CScUserEO> findByid(Long aId);
+    Optional<CScUserEO> findById(Long aId);
 
     /**
      * Finds an user by the name

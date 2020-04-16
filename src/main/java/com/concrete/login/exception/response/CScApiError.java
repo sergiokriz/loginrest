@@ -19,7 +19,7 @@ public class CScApiError {
     @JsonProperty("mensagem")
     private String message;
 
-    private CScApiError() {
+    public CScApiError() {
     }
 
     /**
@@ -30,7 +30,14 @@ public class CScApiError {
     }
 
     /**
-     * @param aMessage message
+     * @param aMessage error message
+     */
+    public CScApiError(String aMessage) {
+        this.message = aMessage;
+    }
+
+    /**
+     * @param aMessage    message
      * @param aHttpStatus http status code
      */
     public CScApiError(String aMessage, HttpStatus aHttpStatus) {

@@ -75,17 +75,6 @@ public class CScJWTAuthenticationFilter extends UsernamePasswordAuthenticationFi
         }
     }
 
-    @Override
-    protected void unsuccessfulAuthentication(HttpServletRequest aRequest,
-                                              HttpServletResponse aResponse,
-                                              AuthenticationException aFailed) throws IOException, ServletException {
-
-        writeJsonHttpServletResponse(aResponse,
-                HttpStatus.UNAUTHORIZED.value(),
-                new CScApiError("Usuário e/ou senha inválidos.",
-                        HttpStatus.UNAUTHORIZED));
-    }
-
     /**
      * Resolves the user email by a given Authentication
      *
